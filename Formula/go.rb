@@ -10,7 +10,8 @@ class Go < Formula
 
     go_version = version.to_s.split(".")[0..1].join(".")
     resource "gotools" do
-      url "https://go.googlesource.com/tools.git",
+     # url "https://go.googlesource.com/tools.git",
+      url "https://github.com/golang/tools.git",
           :branch => "release-branch.go#{go_version}",
           :revision => "26c35b4dcf6dfcb924e26828ed9f4d028c5ce05a"
     end
@@ -27,7 +28,8 @@ class Go < Formula
     url "https://github.com/golang/go.git"
 
     resource "gotools" do
-      url "https://go.googlesource.com/tools.git"
+     # url "https://go.googlesource.com/tools.git"
+     url "https://github.com/golang/tools.git"
     end
   end
 
